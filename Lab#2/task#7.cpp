@@ -53,26 +53,24 @@ int main() {
     inputMatrix(matrix1, rows1, cols1);
     cout<<"enter matrix 2"<<endl;
     inputMatrix(matrix2, rows2, cols2);
-    if(rows1==rows2 && cols1==cols2) {
-        int** add = allocateMatrix(rows1,cols1);
-        for(int i=0;i<rows1;i++) {
-            for(int j=0;j<cols1;j++) {
-                add[i][j]=matrix1[i][j]+matrix2[i][j];
+
+    if(cols1 == rows2) {
+        int** product= allocateMatrix(rows1,cols2);
+        for (int i = 0; i < rows1; i++) {     
+            for (int j = 0; j < cols2; j++) { 
+                product[i][j]=0;
+                for (int k = 0; k < rows2; k++) { 
+                    product[i][j] += matrix1[i][k] * matrix2[k][j];
+                }
             }
         }
-        cout<<"the additon is:"<<endl;
-        displayMatrix(add,rows1,cols1);
-        int** subtract = allocateMatrix(rows1,cols1);
-        for(int i=0;i<rows1;i++) {
-             for(int j=0;j<cols1;j++) {
-                subtract[i][j]=matrix1[i][j]-matrix2[i][j];
-            }
-        }
-        cout<<"\n subtraction is:\n";
-        displayMatrix(subtract,rows1,cols1);
-        deallocateMatrix(add, rows1);
-        deallocateMatrix(subtract, rows1);
+        cout<<"\nthe product is:\n";
+        displayMatrix(product,rows1,cols2);
+        deallocateMatrix(matrix1,rows1);
+        deallocateMatrix(matrix2,rows2);
+        deallocateMatrix(product,rows1);
     }
-    deallocateMatrix(matrix1, rows1);
-    deallocateMatrix(matrix2, rows2);
+    else {
+        cout<<"multiplication is not possible";
+    }
 }
