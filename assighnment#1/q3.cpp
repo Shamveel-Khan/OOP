@@ -137,15 +137,15 @@ int main() {
 
     cout << "\n4. Testing Rental Restrictions:\n";
     
-    cout << "\nLearner License Tests (John - U001):\n";
+    cout << "\nLearner License Tests (Shamveel - U001):\n";
     system.rentVehicle("U001", 0); 
     system.rentVehicle("U001", 1);  
     system.rentVehicle("U001", 2);  
 
-    cout << "\nIntermediate License Tests (Jane - U002):\n";
+    cout << "\nIntermediate License Tests (Usman - U002):\n";
     system.rentVehicle("U002", 1);
     system.rentVehicle("U002", 2);  
-    cout << "\nFull License Tests (Bob - U003):\n";
+    cout << "\nFull License Tests (Moiz - U003):\n";
     system.rentVehicle("U003", 2); 
 
     cout << "\n5. Updated Vehicle Inventory:\n";
