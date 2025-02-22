@@ -163,6 +163,7 @@ void Student::viewMentorDetails() {
 }
 
 int main() {
+    cout<<"\nShamveel Khan\n24k-0962\n";
     Skill s1(1, "Forehand", "Tennis forehand");
     Skill s2(2, "Backhand", "Tennis backhand");
     

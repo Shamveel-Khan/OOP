@@ -142,7 +142,8 @@ public:
     }
 };
 
-int main() {          
+int main() {       
+    cout<<"\nShamveel Khan\n24k-0962\n";   
     std::cout << "\n===== Football Game Simulation =====" << std::endl;
         
     std::cout << "\nCreating robots..." << std::endl;
