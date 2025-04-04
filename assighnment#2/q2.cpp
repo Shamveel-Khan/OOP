@@ -144,6 +144,8 @@ class hauntedHouse {
 };   
 
 int main() {
+    cout<<"\nShamveel Khan\n24k-0962\n";
+
     hauntedHouse hh("Bhoot Bangla", 5);
 
     ghost* g1 = new Poltergeist("Shamveel", 5);
