@@ -1,0 +1,6 @@
+B Toyota 1 2016
+A supra 4 2017
+C mercedes 3 2019
+A yaris 5 1992
+S bmw 6 2005
+S alsvin 7 1998
