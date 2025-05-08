@@ -22,13 +22,12 @@ int main() {
         getline(ss, type, ',');
         getline (ss,rest);
 
+        string sub = rest.substr(rest.find(":")+1, rest.find(",")-1);
         if (type =="AutonomousCar")
         {
-            string sub = rest.substr(rest.find(":")+1, rest.find(",")-1);
             cout << "auto car version:"<<sub << endl;
         }else if (type =="Electric Vehicle")
         {
-            string sub = rest.substr(rest.find(":")+1, rest.find(",")-1);
             cout << "electric car battery:"<<sub<<endl;
         }
     }

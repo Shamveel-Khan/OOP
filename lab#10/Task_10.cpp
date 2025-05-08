@@ -14,7 +14,6 @@ int main() {
     getline(file, s);
     cout << file.tellg()<<endl;
     cout << s << endl;
-    int r = file.tellg();
     file.seekg(ios :: beg);
     file.seekg(22 , ios :: beg);
 

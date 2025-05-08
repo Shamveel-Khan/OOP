@@ -1,27 +1,30 @@
-#include<iostream>
-#include<fstream>
-#include<sstream>
-#include<string>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
 using namespace std;
 
-int main (){
-    ifstream in("vechicles.txt");
-    if (!in){
-        return 1;
+int main()
+{
+    ifstream file("vechicles.txt");
+    if (!file)
+    {
+        cerr << "file error!!\n";
+        exit(1);
     }
-    string str ;
-    while(getline(in, str)){
-        if (str.empty() || str[0] == '#') {
+    string line;
+    while (getline(file, line))
+    {
+        if (line[0] == '#' || line.empty())
+        {
             continue;
         }
-        istringstream ss (str);
+        istringstream ss(line);
         char type;
         string name;
         int id;
         int year;
         ss >> type >> name >> id >> year;
-        cout << id<<" " << name<<" "  << type << year << endl;
+        cout << type << " " << name << " " << id << " " << year << endl;
     }
-    in.close(); 
-    return 0;
 }

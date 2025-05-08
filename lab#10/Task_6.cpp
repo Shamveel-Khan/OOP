@@ -24,11 +24,11 @@ int inventoryItem :: itemID = 0;
 void writetofile (inventoryItem &a)
 {
     ofstream file;
+    file.open("inventory.dat", ios :: binary);
     if(!file)
     {
         cerr << "error"<<endl;
     }
-    file.open("inventory.dat", ios :: binary);
     file.write(reinterpret_cast<char*>(&a.itemID),sizeof(a.itemID));
     file.write(a.itemName,20);
     file.close();
