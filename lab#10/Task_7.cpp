@@ -4,7 +4,7 @@
 #include<cstring>
 using namespace std;
 
-void writetofile(){
+void writetofile() {
     ofstream file;
     if (!file)
     {
